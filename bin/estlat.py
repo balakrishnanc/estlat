@@ -91,7 +91,7 @@ def main(*args):
         for (x, y, dist, lat) in latencies(get_adj_list(cities_file)):
             f.write(f"{x[0]} {x[1][0]:.4f} {x[1][1]:.4f}")
             f.write(f" {y[0]} {y[1][0]:.4f} {y[1][1]:.4f}")
-            f.write(f"{dist:.2f} {lat:.2f}\n")
+            f.write(f" {dist:.2f} {lat:.2f}\n")
 
 
 if __name__ == '__main__':
