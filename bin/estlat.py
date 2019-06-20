@@ -74,6 +74,9 @@ def latencies(pairs):
     dists = [(x, y, geodesic(x[1], y[1])) for (x, y) in pairs]
     # Latency is computed assuming a max. speed of two-thirds of 'C' in fiber,
     # and an inflation factor of 3.2.
+    # Stated differently, the computed values estimate the lowest feasible
+    # latency assuming optic fiber connectivity over the shortest path between
+    # the two locations.
     return [(x, y, d, 3.2*d/200.0) for (x, y, d) in dists ]
 
 
